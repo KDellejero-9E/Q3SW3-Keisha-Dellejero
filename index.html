@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- JS Setup -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" ref="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Calculator</h2>
+        <p>Enter two numbers:</p>
+        <input type="number" id="num1" placeholder="Enter first number"><br><br>
+        <input type="number" id="num2" placeholder="Enter second number"><br><br>
+        
+        <button onclick="calculateProduct()">Multiply</button>
+        <button onclick="calculatePower()">Power</button>
+        <button onclick="calculateModulus()">Remainder</button>
+        <button onclick="checkEquality()">Check Equality</button>
+    </div>
+
+    <script>
+        function calculateProduct() {
+            var a = document.getElementById("num1").value;
+            var b = document.getElementById("num2").value;
+            var result = a * b;
+            alert("The product is " + result);
+        }
+
+        function calculatePower() {
+            var a = document.getElementById("num1").value;
+            var b = document.getElementById("num2").value;
+            var result = Math.pow(a, b);
+            alert("a raised to b is " + result);
+        }
+
+        function calculateModulus() {
+            var a = document.getElementById("num1").value;
+            var b = document.getElementById("num2").value;
+            var result = a % b;
+            alert("The remainder is " + result);
+        }
+
+        function checkEquality() {
+            var a = document.getElementById("num1").value;
+            var b = document.getElementById("num2").value;
+            if (a == b) {
+                alert("The numbers are equal");
+            } else {
+                alert("The numbers are not equal");
+            }
+        }
+    </script>
+</body>
+</html>
